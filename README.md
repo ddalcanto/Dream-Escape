@@ -14,6 +14,10 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 <img width="740" alt="guide chat white" src="https://user-images.githubusercontent.com/26355832/53457816-dc272d00-39f0-11e9-9833-5f392e7e3bf6.PNG">
 
+### UML Diagram
+
+<img width="761" alt="diagram" src="https://user-images.githubusercontent.com/26355832/53458608-1940ee80-39f4-11e9-8c3b-0e6617b965f3.PNG">
+
 ## Soon To Come
 
 - [ ] Generate graphical levels based on a .txt file
