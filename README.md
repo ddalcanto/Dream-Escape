@@ -1,4 +1,5 @@
 # Dream-Escape
+Trapped in a strange "dream", your character must manipulate the world around them to free themselves.
 
 ## Demo
 
