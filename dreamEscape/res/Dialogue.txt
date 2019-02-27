@@ -1,0 +1,76 @@
+G:
+Welcome back, [PLAYER].
+
+P:
+What? Where am I? All I can see is black!
+
+G:
+Well, why don't you turn on the lights and see?
+
+P:
+What do you mean? I don't even know where I am!
+
+G:
+Wow, the accident really took a toll on your mind.
+Just focus and illuminate the room.
+
+P:
+Ok, ok. I'll give it a try.
+
+
+Click to focus
+
+![SECTION 02]
+
+[whiteBackground]
+
+G:
+Nicely done!
+
+P:
+What the... Where am I? How did I do that!?
+
+G:
+I'll explain everything later. 
+
+P:
+But...
+
+G:
+For now, we need to get you out of that cage.
+
+P:
+Who are y..?
+
+G:
+Simply do as you did last time.
+Close your eyes, concentrate, and...
+
+P:
+JUST SHUT UP!
+I'M NOT DOING ANYTHING UNTIL YOU TELL ME WHERE I AM, AND HOW I GOT HERE!
+
+G:
+[PLAYER], you were in an accident.
+You've fallen into a coma, and...
+
+P:
+A coma!? I need to get out of here!
+What if I miss school?
+I'll be grounded for a month!
+And my sister.
+She must be so worri...
+
+G:
+STOP!
+*sigh*
+I'm sorry, I didn't mean to shout - I know this must be hard for you.
+However, you have no reason to worry; I am going to set things back to the way they should be.
+
+P:
+...
+
+G:
+First things first, we need to get you out of there.
+Unfortunately, my power in here has long since been... lost...
+Because of this, you must return things to the way they should be.
