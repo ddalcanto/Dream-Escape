@@ -12,3 +12,9 @@
 ### Changing Environment
 
 <img width="740" alt="guide chat white" src="https://user-images.githubusercontent.com/26355832/53457816-dc272d00-39f0-11e9-9833-5f392e7e3bf6.PNG">
+
+## Soon To Come
+
+- [/] Graphical game environment
+- [ ] Story full of plot twists
+- [ ] Many character abilities
