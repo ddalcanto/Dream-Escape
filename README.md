@@ -15,6 +15,6 @@
 
 ## Soon To Come
 
-- [/] Graphical game environment
+- [x] Graphical game environment
 - [ ] Story full of plot twists
 - [ ] Many character abilities
