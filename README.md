@@ -15,6 +15,11 @@
 
 ## Soon To Come
 
-- [x] Graphical game environment
+- [ ] Generate graphical levels based on a .txt file
+- [ ] Scrolling credits screen
+- [ ] Change drawing method of chat bubble
+- [ ] Allow text to extend multiple rows if needed
+- [ ] Add the characters face next to their text as they talk
+- [ ] Multiple game levels, each with their own environment and key plot point
 - [ ] Story full of plot twists
 - [ ] Many character abilities
