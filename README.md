@@ -18,6 +18,10 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 <img width="761" alt="diagram" src="https://user-images.githubusercontent.com/26355832/53458608-1940ee80-39f4-11e9-8c3b-0e6617b965f3.PNG">
 
+### Credits Screen
+
+<img width="740" alt="credits" src="https://user-images.githubusercontent.com/26355832/53708559-4412b480-3df1-11e9-8bf6-17381e22abd1.PNG">
+
 ## Added in v 1.01
 
 - Credits
