@@ -30,7 +30,6 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 - Screen containing the games credits
 - Syntax changes to make program work with fewer lines
-- Minor bug fixes
 
 ## Soon To Come
 
