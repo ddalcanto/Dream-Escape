@@ -18,10 +18,16 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 <img width="761" alt="diagram" src="https://user-images.githubusercontent.com/26355832/53458608-1940ee80-39f4-11e9-8c3b-0e6617b965f3.PNG">
 
+## Added in v 1.01
+
+- Credits
+- Minor bug fixes
+- Syntax changes to make program work with fewer lines
+
 ## Soon To Come
 
 - [ ] Generate graphical levels based on a .txt file
-- [ ] Scrolling credits screen
+- [x] Scrolling credits screen
 - [ ] Change drawing method of chat bubble
 - [ ] Allow text to extend multiple rows if needed
 - [ ] Add the characters face next to their text as they talk
