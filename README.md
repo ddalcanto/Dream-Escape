@@ -14,13 +14,17 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 <img width="740" alt="guide chat white" src="https://user-images.githubusercontent.com/26355832/53457816-dc272d00-39f0-11e9-9833-5f392e7e3bf6.PNG">
 
-### UML Diagram
+### Home Screen
 
-<img width="761" alt="diagram" src="https://user-images.githubusercontent.com/26355832/53458608-1940ee80-39f4-11e9-8c3b-0e6617b965f3.PNG">
+<img width="739" alt="homescreen" src="https://user-images.githubusercontent.com/26355832/53708601-74f2e980-3df1-11e9-8d6b-af02ed5f0fa2.PNG">
 
 ### Credits Screen
 
 <img width="740" alt="credits" src="https://user-images.githubusercontent.com/26355832/53708559-4412b480-3df1-11e9-8bf6-17381e22abd1.PNG">
+
+### UML Diagram
+
+<img width="761" alt="diagram" src="https://user-images.githubusercontent.com/26355832/53458608-1940ee80-39f4-11e9-8c3b-0e6617b965f3.PNG">
 
 ## Added in v 1.01
 
