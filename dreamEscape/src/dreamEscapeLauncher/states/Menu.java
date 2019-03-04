@@ -10,7 +10,7 @@ public interface Menu {
 	JButton[] buttons = new JButton[20];
 	
 	// Amount of buttons the starting screen will contain.
-	int originalButtonAmount = 1;
+	int originalButtonAmount = 2;
 
 	Font defaultFont = new Font(Font.SERIF, Font.PLAIN, 30);
 

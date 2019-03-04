@@ -34,7 +34,6 @@ public class ChatButton extends ChatDialogue implements Menu, Chat {
 	public void run(JPanel panel) {
 		// Retrieve the applications main panel.
 		// Display the dialogue line, and create a button over the text
-		State.setState(this);
 		super.run(panel);
 		displayLine();
 		createButton();

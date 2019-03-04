@@ -14,8 +14,6 @@ import dreamEscapeLauncher.states.State;
 
 public class EnterText extends State {
 
-	private ChatButton chatButton = new ChatButton();
-
 	private static JTextField textField = new JTextField();
 	protected JLabel label = new JLabel();
 
@@ -29,9 +27,9 @@ public class EnterText extends State {
 	@Override
 	public void tick() {
 		// If the screen has advanced one time, clear the screen and run begin the game.
+		System.out.println(times);
 		if (times == 1) {
-			chatButton.run(panel);
-			State.setState(chatButton);
+			State.setState(new ChatButton());
 			clearAll();
 		}
 	}

@@ -27,8 +27,7 @@ public class RequestDetails extends EnterText{
 		label.setLocation(SwingConstants.CENTER, 200);
 		label.setSize(1000, 100);
 		panel.add(label);
-		super.run(panel);
-		
+		super.run(panel);	
 	}
 
 	@Override

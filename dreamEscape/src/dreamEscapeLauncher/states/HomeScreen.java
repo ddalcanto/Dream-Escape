@@ -13,8 +13,6 @@ public class HomeScreen extends State implements Menu {
 
 	private ActionListener buttonListener = new ButtonListener();
 
-	private RequestDetails requestDetails = new RequestDetails();
-
 	private int thisButtonAmount;
 
 	@Override
@@ -43,11 +41,12 @@ public class HomeScreen extends State implements Menu {
 		for (int i = 0; i < thisButtonAmount; i++) {
 			buttons[i] = new JButton(String.valueOf(i));
 			buttons[i].setFont(defaultFont);
-			buttons[i].setBounds(100, i * 60 + 40, 300, 100);
+			buttons[i].setBounds(100, i * 200 + 40, 300, 100);
 			buttons[i].addActionListener(buttonListener);
 			panel.add(buttons[i]);
 		}
 		buttons[0].setText("Run Game");
+		buttons[1].setText("Run Credits");
 	}
 
 	// Remove all buttons from this class
@@ -66,21 +65,29 @@ public class HomeScreen extends State implements Menu {
 		// Will also call other "removeButtons()" for future buttons,
 		// such as a "Credits" button. For now has no extra use.
 		this.removeButtons();
-
 	}
 
 	// Run "RequestDetails" class, and set State to it.
 	private void requestDetailsRun() {
-		requestDetails.run(panel);
-		State.setState(requestDetails);
+		State.setState(new RequestDetails());
+	}
+	
+	private void creditsRun() {
+		State.setState(new Credits());
 	}
 
 	class ButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
+			//TODO Maybe delete run methods, instead just calling the .setState()?
 			// If the first button is clicked, remove all of the buttons being displayed and run RequestDetails
 			if (e.getSource() == buttons[0]) {
 				removeAllButtons();
 				requestDetailsRun();
+			}
+			
+			if(e.getSource() == buttons[1]) {
+				removeAllButtons();
+				creditsRun();
 			}
 		}
 	}
