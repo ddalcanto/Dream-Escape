@@ -24,7 +24,7 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 ### UML Diagram
 
-<img width="761" alt="diagram" src="https://user-images.githubusercontent.com/26355832/53458608-1940ee80-39f4-11e9-8c3b-0e6617b965f3.PNG">
+<img width="1210" alt="Screen Shot 2019-03-18 at 1 14 47 PM" src="https://user-images.githubusercontent.com/26355832/54557093-ffa21f80-497f-11e9-9f6d-a3fd9ea9d196.png">
 
 ## Added in v 1.01
 
