@@ -31,6 +31,13 @@ Trapped in a strange "dream", your character must manipulate the world around th
 - Screen containing the games credits
 - Syntax changes to make program work with fewer lines
 
+## Added in v 1.1
+
+- Reorganized the project to extends JPanel
+- Changed the drawing method of the program to utalize paintComponent
+- Added a graphical 2d world
+- Many syntax changes to make the program run more efficiently, conistently, and smoother
+
 ## Soon To Come
 
 - [x] Generate graphical levels based on a .txt file
