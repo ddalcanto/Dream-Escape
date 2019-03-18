@@ -8,11 +8,11 @@ Trapped in a strange "dream", your character must manipulate the world around th
 <img width="739" alt="entername" src="https://user-images.githubusercontent.com/26355832/53457760-b7cb5080-39f0-11e9-90eb-9709931d48e4.PNG">
 
 ### Immersive Script
-<img width="740" alt="welcome" src="https://user-images.githubusercontent.com/26355832/53457807-d598b580-39f0-11e9-87f4-218a92244b8a.PNG">
+<img width="1022" alt="Screen Shot 2019-03-18 at 1 05 20 PM" src="https://user-images.githubusercontent.com/26355832/54556563-bdc4a980-497e-11e9-83fa-c8e314cec167.png">
 
-### Changing Environment
+### Changing and Immersive Graphical Environment
 
-<img width="740" alt="guide chat white" src="https://user-images.githubusercontent.com/26355832/53457816-dc272d00-39f0-11e9-9833-5f392e7e3bf6.PNG">
+<img width="1022" alt="Screen Shot 2019-03-18 at 1 06 22 PM" src="https://user-images.githubusercontent.com/26355832/54556580-c74e1180-497e-11e9-9a81-817d009e87d1.png">
 
 ### Home Screen
 
@@ -33,9 +33,9 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 ## Soon To Come
 
-- [ ] Generate graphical levels based on a .txt file
+- [x] Generate graphical levels based on a .txt file
 - [x] Scrolling credits screen
-- [ ] Change drawing method of chat bubble
+- [x] Change drawing method of chat bubble
 - [ ] Allow text to extend multiple rows if needed
 - [ ] Add the characters face next to their text as they talk
 - [ ] Multiple game levels, each with their own environment and key plot point
