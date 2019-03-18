@@ -43,6 +43,7 @@ Trapped in a strange "dream", your character must manipulate the world around th
 - [x] Generate graphical levels based on a .txt file
 - [x] Scrolling credits screen
 - [x] Change drawing method of chat bubble
+- [ ] Add another layer of graphics to implement other world objects and details
 - [ ] Allow text to extend multiple rows if needed
 - [ ] Add the characters face next to their text as they talk
 - [ ] Multiple game levels, each with their own environment and key plot point
