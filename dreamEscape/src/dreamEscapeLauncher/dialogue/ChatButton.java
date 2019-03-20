@@ -4,10 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JPanel;
+import javax.swing.JFrame;
 
 import dreamEscapeLauncher.states.Menu;
-import dreamEscapeLauncher.states.State;
 
 public class ChatButton extends ChatDialogue implements Menu, Chat {
 
@@ -17,12 +16,11 @@ public class ChatButton extends ChatDialogue implements Menu, Chat {
 		System.out.println("created");
 		buttons[0] = new JButton();
 		buttons[0].addActionListener(buttonListener);
-		// The -45 under width is to stop the button from clipping through the rounded edges of the chat bubble.
-		buttons[0].setBounds(chatX, chatY, chatXSize - 45, chatYSize);
+		buttons[0].setBounds(chatX - 15, chatY, chatXSize - 130, chatYSize - 20);
 		buttons[0].setOpaque(false);
 		buttons[0].setContentAreaFilled(false);
 		buttons[0].setBorderPainted(false); // Allows text to show through.
-		panel.add(buttons[0]);
+		add(buttons[0]);
 	}
 
 	private boolean clicked() {
@@ -31,12 +29,13 @@ public class ChatButton extends ChatDialogue implements Menu, Chat {
 		return true;
 	}
 
-	public void run(JPanel panel) {
-		// Retrieve the applications main panel.
+	public void run(JFrame frame) {
+		
+		super.run(frame);
 		// Display the dialogue line, and create a button over the text
-		super.run(panel);
 		displayLine();
 		createButton();
+		setLayout(null);
 	}
 
 	// May not need a tick method, except to redraw buttons.

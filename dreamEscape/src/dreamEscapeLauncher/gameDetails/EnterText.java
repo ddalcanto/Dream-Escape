@@ -1,15 +1,14 @@
 package dreamEscapeLauncher.gameDetails;
 
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import dreamEscapeLauncher.dialogue.ChatButton;
+import dreamEscapeLauncher.dialogue.DialogueState;
 import dreamEscapeLauncher.states.State;
 
 public class EnterText extends State {
@@ -27,43 +26,35 @@ public class EnterText extends State {
 	@Override
 	public void tick() {
 		// If the screen has advanced one time, clear the screen and run begin the game.
-		System.out.println(times);
 		if (times == 1) {
-			State.setState(new ChatButton());
+			State.setState(new DialogueState());
 			clearAll();
 		}
 	}
 
 	public void clearAll() {
-		panel.remove(textField);
-		panel.remove(label);
-		panel.setBackground(Color.BLUE); // Without this old contents don't clear.
-		panel.setBackground(Color.BLACK);
-		
+		System.out.println("clear all");
+		frame.remove(this);
 	}
 
 	@Override
-	public void run(JPanel panel) {
+	public void run(JFrame frame) {
 		// Retrieve the applications main panel
-		setPanel(panel);
+		this.frame = frame;
 		textField.setSize(500, 100);
 		textField.setLocation(250, 400);
 		textField.setFont(new Font(Font.SERIF, Font.PLAIN, 30));
 		textField.setHorizontalAlignment(JTextField.CENTER);
 		textField.addKeyListener(keyList);
-		panel.add(textField);
-	}
-
-	@Override
-	public void setPanel(JPanel panel) {
-		// Retrieve the application's main JPanel, and set this classes "panel" to it
-		this.panel = panel;
+		add(textField);
+		add(label);
+		setLayout(null);
+		frame.add(this);
 	}
 
 	class KeyTest implements KeyListener {
 		@Override
 		public void keyTyped(KeyEvent e) {
-			// TODO Auto-generated method stub
 		}
 
 		@Override

@@ -3,25 +3,36 @@ package dreamEscapeLauncher.dialogue;
 import java.awt.Color;
 
 public interface Chat {
-	/*
-	 * int chatX = 15; int chatY = 20; int chatXSize = 590; int chatYSize = 160;
-	 */
 
-	// Player's color when the screen is black.
-	Color pColorB = Color.WHITE;
-	// Guide's color when the screen is black.
-	Color gColorB = Color.RED;
+	// TEXT
 
-	// Player's color when the screen is white.
-	Color pColorW = Color.BLACK;
-	// Guide's color when the screen is white.
-	Color gColorW = Color.BLUE;
+	// Player's text color when the screen is black.
+	Color pColorBText = Color.BLACK;
+	// Guide's text color when the screen is black.
+	Color gColorBText = Color.RED;
+
+	// Player's text color when the screen is white.
+	Color pColorWText = Color.WHITE;
+	// Guide's text color when the screen is white.
+	Color gColorWText = Color.DARK_GRAY;
+
+	// CHAT BUBBLES
+
+	// Player's text color when the screen is black.
+	Color pColorBBubble = Color.WHITE;
+	// Guide's text color when the screen is black.
+	Color gColorBBubble = Color.LIGHT_GRAY;
+
+	// Player's chat bubble color when the screen is white.
+	Color pColorWBubble = Color.BLACK;
+	// Guide's chat bubble color when the screen is white.
+	Color gColorWBubble = Color.CYAN;
 
 	// Position of the chat.
 	int chatX = 80;
 	int chatY = 35;
 	// Size of the chat.
-	int chatXSize = 755;
-	int chatYSize = 130;
+	int chatXSize = 850;
+	int chatYSize = 160;
 
 }

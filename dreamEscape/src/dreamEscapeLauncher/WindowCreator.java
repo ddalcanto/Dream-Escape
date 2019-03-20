@@ -6,7 +6,6 @@ import javax.swing.JPanel;
 public class WindowCreator {
 
 	public static JFrame frame;
-	public static JPanel panel;
 
 	public static int frameW;
 	public static int frameH;
@@ -20,18 +19,14 @@ public class WindowCreator {
 	}
 
 	protected void CreateWindow() {
-		//Creates a JFrame and attaches a JPanel to it.
+		// Creates a JFrame.
 		frame = new JFrame();
-		panel = new JPanel();
-
 		frame.setTitle(title);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
-		frame.add(panel);
 		frame.setSize(frameW, frameH);
 		frame.setLocationRelativeTo(null);
 
-		panel.setLayout(null);
 		frame.setVisible(true);
 	}
 }

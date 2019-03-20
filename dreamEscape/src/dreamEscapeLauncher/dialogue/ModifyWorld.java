@@ -2,33 +2,39 @@ package dreamEscapeLauncher.dialogue;
 
 import java.awt.Color;
 
-import javax.swing.JPanel;
+import javax.swing.JFrame;
 
 import dreamEscapeLauncher.states.State;
+import dreamEscapeLauncher.world.Tiles;
 
 public class ModifyWorld extends State {
 
+	Tiles tiles = new Tiles();
+
 	protected Color color;
+
+	private boolean showWorld = false;
+	protected boolean runTiles = false;
 
 	@Override
 	public void tick() {
-		panel.revalidate();
+		repaint();
 	}
 
 	@Override
-	public void run(JPanel panel) {
-		// Retrieve the applications main panel.
-		setPanel(panel);
+	public void run(JFrame frame) {
+		this.frame = frame;
+		setLayout(null);
+		frame.add(this);
 	}
 
-	@Override
-	public void setPanel(JPanel panel) {
-		// Retrieve the application's main JPanel, and set this classes "panel" to it.
-		this.panel = panel;
-
+	protected void makeWhite() {
+		System.out.println("set to white");
+		setBackground(Color.WHITE);
 	}
-
-	protected void whiteBackround() {
-		panel.setBackground(Color.WHITE);
+	
+	protected void runTiles() {
+		tiles.loadImage();
+		runTiles = true;
 	}
 }

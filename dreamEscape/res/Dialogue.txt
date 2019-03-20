@@ -22,7 +22,9 @@ Click to focus
 
 ![SECTION 02]
 
-[whiteBackground]
+[makeWhite]
+
+[showWorld]
 
 G:
 Nicely done!
@@ -74,3 +76,6 @@ G:
 First things first, we need to get you out of there.
 Unfortunately, my power in here has long since been... lost...
 Because of this, you must return things to the way they should be.
+Now, listen closely. [PLAYER], you must not continue the game! If you do, you'll encounter a terrible error.
+I'm warning you! Don't go any further! The error is very long and annoying! Look, you broke the text. Are you happy?
+Fine then, enjoy your error message.

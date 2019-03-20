@@ -1,9 +1,7 @@
 package dreamEscapeLauncher;
 
-import java.awt.Color;
-
-import dreamEscapeLauncher.dialogue.ChatDialogue;
-import dreamEscapeLauncher.gameDetails.EnterText;
+import dreamEscapeLauncher.dialogue.DialogueState;
+import dreamEscapeLauncher.gameDetails.RequestDetails;
 import dreamEscapeLauncher.states.Credits;
 import dreamEscapeLauncher.states.HomeScreen;
 import dreamEscapeLauncher.states.State;
@@ -11,48 +9,56 @@ import dreamEscapeLauncher.states.State;
 public class StateCustomizer extends WindowCreator {
 
 	private int state;
+	
+	public static boolean tilesDebug = false;
 
 	public StateCustomizer(String title, int width, int height) {
-		super("Dream Escape", 1000, 1000);
+		// super("Dream Escape", 1038, 1060); // Correct size for Windows
+		super("Dream Escape", 1024, 1045); // Correct size for Mac
 	}
 
 	public void CreateWindow() {
 		super.CreateWindow();
 		state = 1;
-		
+
 		// Changes the starting State. Only for debug purposes.
 		switch (state) {
 		case 1:
 			State.setState(new HomeScreen());
 			break;
 		case 2:
-			State.setState(new EnterText());
+			State.setState(new RequestDetails());
 			break;
 		case 3:
-			panel.setBackground(Color.BLACK);
-			State.setState(new ChatDialogue());
+			State.setState(new DialogueState());
 			break;
 		case 4:
 			State.setState(new Credits());
+			break;
+		case 5:
+			DialogueState dialogueState = new DialogueState();
+			tilesDebug = true;
+			dialogueState.tilesDebug();
+			State.setState(dialogueState);
 			break;
 		default:
 			System.out.println("Error: Valid state not set! Terminating program.");
 			System.exit(0);
 			break;
 		}
-//		State.getState().run(panel);
 		// Run the "run(JPanel)" method of whichever state "State" has been set to.
 	}
 
 	public void run() {
-		System.out.println(State.getState());
-		State.getState().run(panel);
-//		panel.revalidate();
+		State.getState().run(frame);
 	}
 
 	public void tick() {
-//		System.out.println(State.getState());
 		// Run the "tick()" method of whichever state "State" has been set to.
 		State.getState().tick();
+		// Make sure the frame is always visible, no matter which classes are being
+		// called
+		frame.setVisible(true);
 	}
+
 }

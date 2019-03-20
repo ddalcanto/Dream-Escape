@@ -1,15 +1,18 @@
 package dreamEscapeLauncher.states;
 
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public abstract class Runs {
+import dreamEscapeLauncher.dialogue.ChatBubble;
 
-	protected JPanel panel;
+public abstract class Runs extends JPanel {
+
+	protected JFrame frame;
 
 	public abstract void tick();
 
-	public abstract void run(JPanel panel);
-
-	public abstract void setPanel(JPanel panel);
+	public abstract void run(JFrame frame);
 
 }
