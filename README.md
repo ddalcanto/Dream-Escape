@@ -30,17 +30,31 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 <img width="956" alt="UML Diagram" src="https://user-images.githubusercontent.com/26355832/55908780-8ae58e00-5b97-11e9-8076-c7dcb8d706ac.png">
 
-## Added in v 1.01
+## Added in v1.01
 
 - Screen containing the games credits
 - Syntax changes to make program work with fewer lines
 
-## Added in v 1.1
+## Added in v1.1
 
 - Reorganized the project to extends JPanel
 - Changed the drawing method of the program to utalize paintComponent
 - Added a graphical 2d world
 - Many syntax changes to make the program run more efficiently, conistently, and smoother
+
+## Added in v1.5
+
+- Added additional layers of game objects
+- Added a game sprite
+- Added different states for that character (can move, can't move, etc)
+- Added collision detection around the walls and character
+- Added different fonts which swap based on which character is talking, the game state, etc.
+- Added more different colors for the chat bubbles which change based on which character is talking, the game state, etc.
+- Overall efficiency of running program improved
+- Syntax changes to make program better organized
+- Different method of loading images
+- Modified heirarchy of world objects for easier implementation of additional objects
+- Many more!
 
 ## Soon To Come
 
