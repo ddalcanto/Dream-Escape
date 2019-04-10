@@ -66,8 +66,8 @@ Trapped in a strange "dream", your character must manipulate the world around th
 - [x] Add additional text fonts for the dialogue
 - [ ] Add a walk cycle for the player character
 - [ ] Allow text to extend multiple rows if needed
-- [ ] Add a character for "The Guide"
-- [ ] Add the characters face next to their text as they talk
+- [ ] Add a character sprite for "The Guide"
+- [ ] Add the character's face next to their text as they talk
 - [ ] Multiple game levels, each with their own environment and key plot point
 - [ ] Story full of plot twists
 - [ ] Many character abilities
