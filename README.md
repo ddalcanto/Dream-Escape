@@ -14,6 +14,10 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 <img width="1022" alt="Screen Shot 2019-03-18 at 1 06 22 PM" src="https://user-images.githubusercontent.com/26355832/54556580-c74e1180-497e-11e9-9a81-817d009e87d1.png">
 
+### Collision Detection
+
+![]Collision Detection Demo.gif
+
 ### Home Screen
 
 <img width="739" alt="homescreen" src="https://user-images.githubusercontent.com/26355832/53708601-74f2e980-3df1-11e9-8d6b-af02ed5f0fa2.PNG">
