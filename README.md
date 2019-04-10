@@ -47,9 +47,9 @@ Trapped in a strange "dream", your character must manipulate the world around th
 - [x] Generate graphical levels based on a .txt file
 - [x] Scrolling credits screen
 - [x] Change drawing method of chat bubble
-- [ ] Add another layer of graphics to implement other world objects and details
-- [ ] Create a moveable player
-- [ ] Add additional text fonts for the dialogue
+- [x] Add another layer of graphics to implement other world objects and details
+- [x] Create a moveable player
+- [x] Add additional text fonts for the dialogue
 - [ ] Add a walk cycle for the player character
 - [ ] Allow text to extend multiple rows if needed
 - [ ] Add a character for "The Guide"
