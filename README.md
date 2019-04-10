@@ -16,7 +16,7 @@ Trapped in a strange "dream", your character must manipulate the world around th
 
 ### Collision Detection
 
-![]Collision Detection Demo.gif
+![Collision Detection Demo](https://user-images.githubusercontent.com/26355832/55908447-bae06180-5b96-11e9-9045-64fc8b7cc04e.gif)
 
 ### Home Screen
 
