@@ -45,7 +45,7 @@ Trapped in a strange "dream", your character must manipulate the world around th
 ## Added in v1.5
 
 - Added additional layers of game objects
-- Added a game sprite
+- Added a moveable character
 - Added different states for that character (can move, can't move, etc)
 - Added collision detection around the walls and character
 - Added different fonts which swap based on which character is talking, the game state, etc.
