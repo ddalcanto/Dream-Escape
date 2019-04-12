@@ -10,20 +10,26 @@ import javax.imageio.ImageIO;
 
 public class Loader {
 
-	public static BufferedImage loadImage(String path) { // path = name of photo
+	public static BufferedImage loadImage(String fileName) { // fileName = name of photo
 		try {
-			return ImageIO.read(new File("res/" + path));
+			// Return a BufferedImage based on the fileName entered
+			return ImageIO.read(new File("res/" + fileName));
 		} catch (IOException e) {
+			// Print out an error and terminate the program.
 			System.out.println("ERROR: UNABLE TO LOAD IMAGE");
+			System.exit(1);
 		}
 		return null;
 	}
 
-	public static Scanner loadFileAsScanner(String path) {
+	public static Scanner loadFileAsScanner(String fileName) {
 		try {
-			return new Scanner(new File("res/" + path));
+			// Return a Scanner object based on the fileName entered
+			return new Scanner(new File("res/" + fileName));
 		} catch (FileNotFoundException e) {
+			// Print out an error and terminate the program.
 			System.out.println("ERROR: UNABLE TO LOAD FILE");
+			System.exit(1);
 		}
 		return null;
 	}

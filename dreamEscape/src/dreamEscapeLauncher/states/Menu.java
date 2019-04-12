@@ -12,6 +12,7 @@ public interface Menu {
 	// Amount of buttons the starting screen will contain.
 	int originalButtonAmount = 2;
 
+	// The Font which will be used until set otherwise.
 	Font defaultFont = new Font(Font.SERIF, Font.PLAIN, 30);
 
 }

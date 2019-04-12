@@ -33,6 +33,7 @@ public class EnterText extends State {
 	}
 
 	public void clearAll() {
+		// Moves this class's panel from the JFrame
 		System.out.println("clear all");
 		frame.remove(this);
 	}
@@ -41,13 +42,16 @@ public class EnterText extends State {
 	public void run(JFrame frame) {
 		// Retrieve the applications main panel
 		this.frame = frame;
+		// Set the details of the JTextField
 		textField.setSize(500, 100);
 		textField.setLocation(250, 400);
 		textField.setFont(new Font(Font.SERIF, Font.PLAIN, 30));
 		textField.setHorizontalAlignment(JTextField.CENTER);
 		textField.addKeyListener(keyList);
+		// Add the JTextField and JLabel to the JPanel
 		add(textField);
 		add(label);
+		// Add the panel to the JFrame
 		setLayout(null);
 		frame.add(this);
 	}

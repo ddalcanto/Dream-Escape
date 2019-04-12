@@ -30,12 +30,10 @@ public class ChatButton extends ChatDialogue implements Menu, Chat {
 	}
 
 	public void run(JFrame frame) {
-		
 		super.run(frame);
 		// Display the dialogue line, and create a button over the text
 		displayLine();
 		createButton();
-		setLayout(null);
 	}
 
 	// May not need a tick method, except to redraw buttons.

@@ -2,6 +2,7 @@ package dreamEscapeLauncher;
 
 import dreamEscapeLauncher.dialogue.DialogueState;
 import dreamEscapeLauncher.gameDetails.RequestDetails;
+import dreamEscapeLauncher.player.Player;
 import dreamEscapeLauncher.states.Credits;
 import dreamEscapeLauncher.states.HomeScreen;
 import dreamEscapeLauncher.states.State;
@@ -9,12 +10,12 @@ import dreamEscapeLauncher.states.State;
 public class StateCustomizer extends WindowCreator {
 
 	private int state;
-	
+
 	public static boolean tilesDebug = false;
 
 	public StateCustomizer(String title, int width, int height) {
-		// super("Dream Escape", 1038, 1060); // Correct size for Windows
-		super("Dream Escape", 1024, 1045); // Correct size for Mac
+		// super("Dream Escape", 1050, 1080); // Correct window size for Windows
+		super("Dream Escape", 1024, 1045); // Correct window size for Mac
 	}
 
 	public void CreateWindow() {
@@ -36,7 +37,9 @@ public class StateCustomizer extends WindowCreator {
 			State.setState(new Credits());
 			break;
 		case 5:
+			// Display Tiles.
 			DialogueState dialogueState = new DialogueState();
+			Player.canMove = true;
 			tilesDebug = true;
 			dialogueState.tilesDebug();
 			State.setState(dialogueState);
@@ -50,6 +53,7 @@ public class StateCustomizer extends WindowCreator {
 	}
 
 	public void run() {
+		// Run the "run" method of the current State
 		State.getState().run(frame);
 	}
 
@@ -57,7 +61,7 @@ public class StateCustomizer extends WindowCreator {
 		// Run the "tick()" method of whichever state "State" has been set to.
 		State.getState().tick();
 		// Make sure the frame is always visible, no matter which classes are being
-		// called
+		// called.
 		frame.setVisible(true);
 	}
 

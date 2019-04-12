@@ -27,7 +27,7 @@ public class RequestDetails extends EnterText {
 		label.setHorizontalAlignment(JLabel.CENTER);
 		label.setLocation(SwingConstants.CENTER, 200);
 		label.setSize(1000, 100);
+		// Add the label to the JPanel
 		add(label);
-		setLayout(null);
 	}
 }

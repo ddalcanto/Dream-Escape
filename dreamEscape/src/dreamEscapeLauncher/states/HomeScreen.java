@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import dreamEscapeLauncher.gameDetails.RequestDetails;
 
@@ -16,7 +15,7 @@ public class HomeScreen extends State implements Menu {
 
 	private int thisButtonAmount;
 
-	JFrame frame;
+	private JFrame frame;
 
 	// Not useful as of now; required due to abstract method.
 	public void tick() {
@@ -57,7 +56,6 @@ public class HomeScreen extends State implements Menu {
 			remove(buttons[i]);
 			this.tick();
 		}
-//		setBackground(Color.BLACK);
 	}
 
 	// Remove all buttons from all classes which are currently displaying a button.
@@ -69,28 +67,22 @@ public class HomeScreen extends State implements Menu {
 		frame.remove(this);
 	}
 
-	// Run "RequestDetails" class, and set State to it.
-	private void requestDetailsRun() {
-		State.setState(new RequestDetails());
-	}
-
-	private void creditsRun() {
-		State.setState(new Credits());
-	}
-
 	class ButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			// TODO Maybe delete run methods, instead just calling the .setState()?
 			// If the first button is clicked, remove all of the buttons being displayed and
 			// run RequestDetails
 			if (e.getSource() == buttons[0]) {
 				removeAllButtons();
-				requestDetailsRun();
+				// Run "RequestDetails" class, and set State to it.
+				State.setState(new RequestDetails());
 			}
 
+			// If the first button is clicked, remove all of the buttons being displayed and
+			// run Credits
 			if (e.getSource() == buttons[1]) {
 				removeAllButtons();
-				creditsRun();
+				// Run "creditsRun" class, and set State to it.
+				State.setState(new Credits());
 			}
 		}
 	}

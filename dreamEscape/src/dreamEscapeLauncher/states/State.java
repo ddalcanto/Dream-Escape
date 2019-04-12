@@ -1,10 +1,6 @@
 package dreamEscapeLauncher.states;
 
-import java.awt.Graphics;
-
 import dreamEscapeLauncher.StateCustomizer;
-import dreamEscapeLauncher.dialogue.ChatBubble;
-import dreamEscapeLauncher.world.Tiles;
 
 public abstract class State extends Runs {
 
@@ -22,4 +18,6 @@ public abstract class State extends Runs {
 	public static State getState() {
 		return currentState;
 	}
+
+	public abstract void tick();
 }

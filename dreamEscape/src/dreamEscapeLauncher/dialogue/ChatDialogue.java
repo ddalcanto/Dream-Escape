@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.Timer;
 
 import dreamEscapeLauncher.gameDetails.EnterText;
+import dreamEscapeLauncher.player.Player;
 import dreamEscapeLauncher.utils.Loader;
 
 public class ChatDialogue extends ChatBubble implements Chat {
@@ -21,7 +22,7 @@ public class ChatDialogue extends ChatBubble implements Chat {
 
 	private String currentLine;
 
-	// Which line of the map is being accessed.
+	// Which line of the dialogueMap is being accessed.
 	private int lineNum = 0;
 	// How many of the characters of a line are being displayed.
 	private int index = 0;
@@ -29,7 +30,6 @@ public class ChatDialogue extends ChatBubble implements Chat {
 	// If the background textColor is currently set to white.
 	private boolean isBlack = true;
 
-	private boolean showWorld = false;
 	// If the file has been loaded.
 	private boolean isLoaded = false;
 
@@ -41,10 +41,10 @@ public class ChatDialogue extends ChatBubble implements Chat {
 	private Font font = new Font(Font.DIALOG, Font.BOLD, 15);
 
 	// Used to hold the game's script.
-	private Map<Integer, String> map = new HashMap<>();
+	private Map<Integer, String> dialogueMap = new HashMap<>();
 	// Used to retrieve the line # associated with a line of
 	// dialogue text.
-	private Map<String, Integer> reverseMap = new HashMap<>();
+	private Map<String, Integer> reverseDialogueMap = new HashMap<>();
 
 	// Increments the displayed letter of the text bubble.
 	private ActionListener updateIndex = new TimerListener();
@@ -57,12 +57,12 @@ public class ChatDialogue extends ChatBubble implements Chat {
 		System.out.println();
 		int loop = 0;
 
-		// Adds the contents of the script to the map line by line.
+		// Adds the contents of the script to the dialogueMap line by line.
 		while (Script.hasNextLine()) {
 			String dialogue = Script.nextLine();
 			dialogue = dialogue.replace("[PLAYER]", EnterText.playerName);
-			map.put(loop, dialogue);
-			reverseMap.put(dialogue, loop);
+			dialogueMap.put(loop, dialogue);
+			reverseDialogueMap.put(dialogue, loop);
 			loop++;
 		}
 		Script.close();
@@ -70,7 +70,7 @@ public class ChatDialogue extends ChatBubble implements Chat {
 	}
 
 	public void nextLine() {
-		// Increase the current line of the map which is being accessed.
+		// Increase the current line of the dialogueMap which is being accessed.
 		lineNum++;
 		// Reset the index.
 		index = 0;
@@ -79,7 +79,7 @@ public class ChatDialogue extends ChatBubble implements Chat {
 	}
 
 	public void displayLine() {
-		currentLine = map.get(lineNum);
+		currentLine = dialogueMap.get(lineNum);
 		// Run "currentLine" through the checks.
 		checkState();
 		label.setFont(font);
@@ -116,7 +116,21 @@ public class ChatDialogue extends ChatBubble implements Chat {
 		// If the current line is "[showWorld]", go to the next line and show the world
 		if (currentLine.equals("[showWorld]")) {
 			nextLine();
-			runTiles();
+			runDrawTiles();
+		}
+
+		if (currentLine.contains("[SPECIAL]")) {
+			font = specialFont;
+			nextLine();
+		}
+
+		if (currentLine.contains("CANMOVE]")) {
+			if (currentLine.contains("!")) {
+				Player.canMove = false;
+			} else {
+				Player.canMove = true;
+			}
+			nextLine();
 		}
 	}
 
@@ -126,11 +140,13 @@ public class ChatDialogue extends ChatBubble implements Chat {
 		if (currentLine.equals("P:") && isBlack) {
 			textColor = pColorBText;
 			color = pColorBBubble;
+			font = playerFont;
 			label.setForeground(textColor);
 			nextLine();
 		} else if (currentLine.equals("G:") && isBlack) {
 			textColor = gColorBText;
 			color = gColorBBubble;
+			font = guideFont;
 			label.setForeground(textColor);
 			nextLine();
 		}
@@ -138,11 +154,13 @@ public class ChatDialogue extends ChatBubble implements Chat {
 		if (currentLine.equals("P:") && !isBlack) {
 			textColor = pColorWText;
 			color = pColorWBubble;
+			font = playerFont;
 			label.setForeground(textColor);
 			nextLine();
 		} else if (currentLine.equals("G:") && !isBlack) {
 			textColor = gColorWText;
 			color = gColorWBubble;
+			font = guideFont;
 			label.setForeground(textColor);
 			nextLine();
 		}
@@ -152,22 +170,18 @@ public class ChatDialogue extends ChatBubble implements Chat {
 		return isBlack;
 	}
 
-	// TODO Possibly add another class which checks background color, leaving "P:"
-	// and "G:" to checkWhoTalk()
-
 	// Checks the entered section, and starts them at that section.
 	// In the future the user will enter a section code, and that code will be
 	// checked.
 	public void checkSec(String sec) {
-		if (map.containsValue(sec)) {
-			System.out.println("step 1");
-			if (map.containsValue(sec)) {
-				lineNum = reverseMap.get(sec);
-				textColor = Color.GREEN;
-				map.put(lineNum + 1, "Running sec 2. Please click to continue.");
-				System.out.println(lineNum);
-				System.out.println("SUCCESS");
-			}
+		// If the dialogueMap of the dialogue contains the section being checked.
+		if (dialogueMap.containsValue(sec)) {
+			// Set the current line number being processed to the corresponding section.
+			lineNum = reverseDialogueMap.get(sec);
+			textColor = Color.GREEN;
+			dialogueMap.put(lineNum + 1, "Running sec 2. Please click to continue.");
+			System.out.println(lineNum);
+			System.out.println("SUCCESS");
 			nextLine();
 			checkState();
 		} else {
@@ -196,8 +210,6 @@ public class ChatDialogue extends ChatBubble implements Chat {
 		label.setLocation(80, 55);
 		label.setOpaque(false);
 		textTimer.start();
-		// TODO get rid of all unnecessary seyLayout's
-		setLayout(null);
 	}
 
 	class TimerListener implements ActionListener {

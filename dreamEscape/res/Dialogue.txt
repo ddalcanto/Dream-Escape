@@ -17,10 +17,13 @@ Just focus and illuminate the room.
 P:
 Ok, ok. I'll give it a try.
 
+[SPECIAL]
 
 Click to focus
 
 ![SECTION 02]
+
+[!CANMOVE]
 
 [makeWhite]
 
@@ -40,6 +43,8 @@ But...
 
 G:
 For now, we need to get you out of that cage.
+
+[CANMOVE]
 
 P:
 Who are y..?

@@ -76,7 +76,6 @@ public class Credits extends State {
 		label.setForeground(Color.WHITE);
 		label.setFont(new Font(Font.DIALOG, Font.BOLD, 35));
 
-		// TODO Understand later
 		// Centers all JTextPane text
 		StyledDocument doc = label.getStyledDocument();
 		SimpleAttributeSet center = new SimpleAttributeSet();
@@ -104,8 +103,10 @@ public class Credits extends State {
 		button.setSize(350, 100);
 		button.setText("Return to main screen");
 		button.setFont(new Font(Font.SERIF, Font.ITALIC, 30));
+		// Add button to the JPanel.
 		add(button);
 		setLayout(null);
+		// Add the JPanel to the frame.
 		frame.add(this);
 	}
 }

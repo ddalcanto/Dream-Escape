@@ -1,7 +1,8 @@
 package dreamEscapeLauncher;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+
+import dreamEscapeLauncher.utils.MoveCharacter;
 
 public class WindowCreator {
 
@@ -27,6 +28,13 @@ public class WindowCreator {
 		frame.setSize(frameW, frameH);
 		frame.setLocationRelativeTo(null);
 
+		attachMoveCharacter();
+
+		frame.setFocusable(true);
 		frame.setVisible(true);
+	}
+
+	private void attachMoveCharacter() {
+		frame.addKeyListener(new MoveCharacter().MoveListener());
 	}
 }

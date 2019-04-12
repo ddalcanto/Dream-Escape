@@ -4,21 +4,31 @@ import java.awt.Color;
 
 import javax.swing.JFrame;
 
+import dreamEscapeLauncher.player.Player;
 import dreamEscapeLauncher.states.State;
-import dreamEscapeLauncher.world.Tiles;
+import dreamEscapeLauncher.world.DrawTiles;
+import dreamEscapeLauncher.world.Foundation;
+import dreamEscapeLauncher.world.Object;
 
 public class ModifyWorld extends State {
 
-	Tiles tiles = new Tiles();
+	protected Foundation foundation = new Foundation();
+	protected DrawTiles drawTiles = new DrawTiles();
+	protected Object object = new Object();
+	protected Player player = new Player();
 
 	protected Color color;
-
-	private boolean showWorld = false;
-	protected boolean runTiles = false;
+	
+	protected boolean runDrawTiles = false;
 
 	@Override
 	public void tick() {
 		repaint();
+		frame.requestFocusInWindow(); // Without this, after clicking on the chat bubble the player can no longer
+										// move.
+		if (runDrawTiles) {
+			player.tick();
+		}
 	}
 
 	@Override
@@ -32,9 +42,10 @@ public class ModifyWorld extends State {
 		System.out.println("set to white");
 		setBackground(Color.WHITE);
 	}
-	
-	protected void runTiles() {
-		tiles.loadImage();
-		runTiles = true;
+
+	protected void runDrawTiles() {
+		 foundation.loadImage();
+		 object.loadImage();
+		 runDrawTiles = true;
 	}
 }

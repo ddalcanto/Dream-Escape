@@ -25,6 +25,7 @@ public class Boundary extends Tile implements IsFoundation {
 			break;
 		// Bottom
 		case 5:
+			System.out.println(type);
 			xPos = 0;
 			break;
 		// Bottom right corner
@@ -39,10 +40,12 @@ public class Boundary extends Tile implements IsFoundation {
 		case 8:
 			xPos = 7;
 			break;
+		// Top side
 		case 9:
 			xPos = 8;
 			break;
 		}
+		// Return the desired tile, set by the switch statement above.
 		return new SpriteSheet(sheet).crop(tileWidth * xPos, tileHeight * yPos, tileWidth, tileHeight);
 	}
 
