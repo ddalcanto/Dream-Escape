@@ -64,6 +64,7 @@ Trapped in a strange "dream", your character must manipulate the world around th
 - [x] Add another layer of graphics to implement other world objects and details
 - [x] Create a moveable player
 - [x] Add additional text fonts for the dialogue
+- [x] Add collision detection for that character
 - [ ] Add a walk cycle for the player character
 - [ ] Allow text to extend multiple rows if needed
 - [ ] Add a character sprite for "The Guide"
